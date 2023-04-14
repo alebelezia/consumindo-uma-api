@@ -63,4 +63,38 @@ function addProduct(newProduct) {
         .catch(error => console.error(error))
 }
 
-addProduct(newProduct)
+//addProduct(newProduct)
+
+//------------------ PUT ----------------------
+const upProduct = {
+    "name": "Caneta azul",
+    "price": 3.21
+}
+
+function updateProduct(id, upProduct){
+    //Use fetch OU axios (comente um dos dois)
+
+    //fetch(`${url}/${id}`, {
+    //    method: "PUT",
+    //    headers: {
+    //        'Content-Type': 'application/json'
+    //    },
+    //    body: JSON.stringify(upProduct)
+    //})
+    //.then(response => response.json())
+    //.then(data => {
+    //    responsePut.textContent = JSON.stringify(data)
+    //    infoUpdate.textContent = `Atualizando o item ${id}:`
+    //})
+    //.catch(error => console.error(error))
+
+    axios.put(`${url}/${id}`, upProduct)
+        .then(response => {
+            responsePut.textContent = JSON.stringify(response.data)
+            infoUpdate.textContent = `Atualizando o item ${id}:`
+        })
+        .catch(error => console.error(error))
+
+}
+
+updateProduct(1, upProduct)
