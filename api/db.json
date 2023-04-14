@@ -1,0 +1,29 @@
+{
+    "products": [
+        {
+        "name": "Caneta",
+        "price": 5.86,
+        "id": 1
+        },
+        {
+        "name": "Lápis",
+        "price": 3.65,
+        "id": 2
+        },
+        {
+        "name": "Borracha",
+        "price": 0.50,
+        "id": 3
+        },
+        {
+            "name": "Caderno",
+            "price": 10.68,
+            "id": 4
+        },
+        {
+            "name": "Tesoura",
+            "price": 7.84,
+            "id": 5
+        }
+    ]
+}
