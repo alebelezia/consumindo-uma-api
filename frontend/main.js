@@ -37,3 +37,30 @@ function getProduct(id){
 
 getProducts()
 getProduct(3)
+
+//------------------ POST ----------------------
+const newProduct = {
+    "name": "Giz azul",
+    "price": 3.98
+}
+
+function addProduct(newProduct) {
+   //Use fetch OU axios
+
+   // fetch(url, {
+   //     method: "POST",
+   //     headers: {
+   //         'Content-Type': 'application/json'
+   //     },
+   //     body: JSON.stringify(newProduct)
+   // })
+   // .then(response => response.json())
+   // .then(data => responsePost.textContent = JSON.stringify(data))
+   // .catch(error => console.error(error))
+
+    axios.post(url, newProduct)
+        .then(response => responsePost.textContent = JSON.stringify(response.data))
+        .catch(error => console.error(error))
+}
+
+addProduct(newProduct)
