@@ -72,7 +72,7 @@ const upProduct = {
 }
 
 function updateProduct(id, upProduct){
-    //Use fetch OU axios (comente um dos dois)
+    //Use fetch OU axios
 
     //fetch(`${url}/${id}`, {
     //    method: "PUT",
@@ -97,4 +97,32 @@ function updateProduct(id, upProduct){
 
 }
 
-updateProduct(1, upProduct)
+//updateProduct(1, upProduct)
+
+//------------------ DELETE ----------------------
+function deleteProduct(id){
+    //Use fetch OU axios
+
+    //fetch(`${url}/${id}`, {
+    //    method: "DELETE",
+    //    headers: {
+    //        'Content-Type': 'application/json'
+    //    }
+    //})
+    //.then(response => response.json())
+    //.then(data => {
+    //    responseDelete.textContent = JSON.stringify(data)
+    //    infoDelete.textContent = `Deletando o item ${id}:`
+    //})
+    //.catch(error => console.error(error));
+
+    axios.delete(`${url}/${id}`)
+    .then(response => {
+        responseDelete.textContent = JSON.stringify(response.data)
+        infoDelete.textContent = `Deletando o item ${id}:`
+    })
+    .catch(error => console.error(error))
+    
+}
+
+deleteProduct(4)
